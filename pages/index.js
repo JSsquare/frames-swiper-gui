@@ -1,64 +1,42 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Frames Swiper</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          This is Home Page Which Can Be Used As Welcome Page OR a Dashboard
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <Link href="/frames"><a>
+          <div className="card">          
+            <h3> Frames Swiper Page &rarr;</h3>
+            <p>Insert your description here...</p>          
+          </div>
+        </a></Link>
         </div>
       </main>
 
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href=""
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
+          Powered by{' '} ____          
         </a>
       </footer>
 
+
+{/* Below Are The CSS Styles  */}
       <style jsx>{`
         .container {
           min-height: 100vh;
@@ -110,7 +88,7 @@ export default function Home() {
         .title a:hover,
         .title a:focus,
         .title a:active {
-          text-decoration: underline;
+          text-decoration: underline;          
         }
 
         .title {
@@ -150,7 +128,7 @@ export default function Home() {
 
         .card {
           margin: 1rem;
-          flex-basis: 45%;
+          flex-basis: 100%;
           padding: 1.5rem;
           text-align: left;
           color: inherit;
@@ -164,7 +142,8 @@ export default function Home() {
         .card:focus,
         .card:active {
           color: #0070f3;
-          border-color: #0070f3;
+          border-color: #0070f3;          
+          box-shadow: 0 0 11px rgba(33,33,33,.2); 
         }
 
         .card h3 {
