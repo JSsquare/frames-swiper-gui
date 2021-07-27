@@ -1,13 +1,16 @@
-import React from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, EffectCoverflow} from 'swiper';
+import SwiperCore, { Navigation, Pagination, EffectCoverflow, Thumbs} from 'swiper';
+import SpeakerNotesEditor from './SpeakerNotesEditor';
 
-SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
+SwiperCore.use([Navigation, Pagination, EffectCoverflow, Thumbs]);
 
-const ImageFrames = ({ googleStorageImages }) => {    
+const ImageFrames = ({ frameSpeakerNotes }) => { 
+    const [thumbsSwiper, setThumbsSwiper] = useState(null);   
+    
     return (
-    <React.Fragment>
-        <Swiper tag="section" wrapperTag="ul"
+    <>
+          <Swiper tag="section" wrapperTag="ul"
         spaceBetween={10}
         slidesPerView={'auto'}      
         effect='coverflow'  
@@ -20,20 +23,26 @@ const ImageFrames = ({ googleStorageImages }) => {
             "slideShadows": true
         }}
         navigation
-        pagination    
-        >
-            {googleStorageImages.map((name_url, index) => (
-               ( 
-               <SwiperSlide tag="li" key={index}>
-                    <img 
-                    src={name_url}
-                    alt={`Slide ${index}`}
-                    />
-                </SwiperSlide>
-                )
-            ))}
+        pagination 
+        thumbs={{ swiper: thumbsSwiper }}   
+        >      
+    {frameSpeakerNotes.map((frames, index) => (        
+        <SwiperSlide tag="li" key={index}>        
+        <img 
+        src={frames.frameImageName}
+        alt={`Slide ${index}`}
+        />                
+    </SwiperSlide>  
+    ))}
         </Swiper>
-    </React.Fragment>
+        <Swiper onSwiper={setThumbsSwiper} spaceBetween={0} slidesPerView={1} freeMode={true} watchSlidesVisibility={true} watchSlidesProgress={true} className="mySwiper">           
+        {frameSpeakerNotes.map((frames, index) => ( 
+            <SwiperSlide key={index}>
+                <SpeakerNotesEditor frames={frames}/>                
+            </SwiperSlide>
+        ))}
+        </Swiper>
+    </>
     );
 };
 
