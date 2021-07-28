@@ -1,7 +1,7 @@
 # frames-swiper-gui
-Frames Swiper GUI Built in NextJS
+Frames Swiper GUI Built in NextJS (a reactJS freamwork)
 
-# Setup
+# Setup Instructions
 Clone this repo and install npm packages with below command
 
 `npm install`
