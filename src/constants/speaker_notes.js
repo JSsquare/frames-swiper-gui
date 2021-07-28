@@ -34,4 +34,20 @@ export const FRAME_SPEAKER_NOTES = [{
                     '0:00:58': "Who's gonna if you want to say that they're going to come up with something to thin the herd."
                 }                
             }]                     
+        },
+        {
+            frameImageName: FRAME_IMAGE_NAMES[2],
+            notes: [
+                {
+                    speakerName: 'Speaker 2',
+                    timeStamps: {
+                        '0:01:04': "I will go with that but they would never To do a pointed attack on people that are going to do whatever they say.",
+                        '0:01:05': "Yes, yes",
+                        '0:01:07': "They're eliminating the wrong group.",
+                        '0:01:10': "If this is the plan, so maybe they've axed us sheeple.",
+                        '0:01:14': "So then can have a second vacxy of covid.",
+                        '0:01:18': "Then come out to kill all the cool people that hit a jukebox and it turns on."
+                    }
+                }
+            ]
         }]

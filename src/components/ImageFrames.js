@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Button } from '@material-ui/core';
 import SwiperCore, { Navigation, Pagination, EffectCoverflow, Thumbs} from 'swiper';
 import SpeakerNotesEditor from './SpeakerNotesEditor';
 
@@ -10,7 +11,7 @@ const ImageFrames = ({ frameSpeakerNotes }) => {
     
     return (
     <>
-          <Swiper tag="section" wrapperTag="ul"
+    <Swiper tag="section" wrapperTag="ul"
         spaceBetween={10}
         slidesPerView={'auto'}      
         effect='coverflow'  
@@ -41,7 +42,11 @@ const ImageFrames = ({ frameSpeakerNotes }) => {
                 <SpeakerNotesEditor frames={frames}/>                
             </SwiperSlide>
         ))}
-        </Swiper>
+        <div className="button-wrapper">        
+        <Button variant="contained" color="primary">Save</Button>
+        <Button variant="contained" color="secondary">Undo</Button>        
+        </div>
+        </Swiper>    
     </>
     );
 };
