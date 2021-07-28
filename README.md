@@ -27,9 +27,12 @@ Below are the key components, files and data of the Frames Swiper GUI Applicatio
 4. Components under the folder `EditorToolBar` is the custom tool bar for Bold Underline and Italics and color tools
 5. All CSS styles are under `styles.css`
 
+![Codebase](https://raw.githubusercontent.com/JSsquare/frames-swiper-gui/main/public/images/Screen%20Shot%202021-07-28%20at%2012.29.50%20AM.png)
 
 
 
-# Preview
+
+
+# Video Preview
 
 ![Frame Swiper Preview](https://raw.githubusercontent.com/JSsquare/frames-swiper-gui/main/public/Frames_Swiper.gif)
