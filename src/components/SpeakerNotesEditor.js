@@ -2,7 +2,6 @@ import { ContentState, convertFromRaw, convertFromHTML, Editor, EditorState, Ric
 import React, { useState } from 'react';
 import { useEffectOnce } from 'react-use';
 import { createSpeakerNotesHTML } from '../utils/createSpeakerNotesHTML';
-import styled from "styled-components";
 import Toolbar from "./EditorToolbar";
 import { customStyleFn } from "./EditorToolbar/customStyles";
 
